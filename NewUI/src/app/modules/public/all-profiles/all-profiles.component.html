@@ -1,0 +1,33 @@
+<section class="" id="comments">
+    <div class="container">
+        <div class="row">
+
+            <div *ngFor="let group of CreateBlogData" class="col-md-4">
+                <div class="card media-body" >
+                    <div class="card-header">
+
+                        <h5 class="media-heading" style="white-space: nowrap!important;">{{group.title}}</h5>
+
+                    </div>
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="media">
+                                    <i class="fa fa-user profile-icon" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="ml-5 mt-2">
+
+                                    <span >{{group.description}}</span>
+                                    <span><a routerLink="/EmployeeRating" class="btn btn-link pl-1" href="#">
+                                        Rate the Employee</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

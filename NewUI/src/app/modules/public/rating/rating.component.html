@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>]Log in</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body class="hold-transition login-page">
+    <div class="login-box">
+     
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Rate the employee as per his performance.</p>
+
+                <form name="Rating_nm" id="Rating" [formGroup]="RatingForm" (ngSubmit)="onSubmit()">
+                    <!-- <form #loginForm="ngForm" (ngSubmit)="onSubmit()"> -->
+                    <div class="card-body">
+                        <!-- <div *ngFor="let group of RatingData"> -->
+
+                            <div class="form-group">
+                                <label for="Skillset">Skillsets :</label>
+                                <select formControlName="Skillset" class="form-control">
+                                    <option>Select Skillset</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    
+                                    <!-- <option *ngFor="let web of RatingData">{{web}}</option> -->
+                                </select>
+                                <!-- <div *ngIf="f.Skillset.touched && f.Skillset.invalid" class="alert alert-danger">
+                                    <div *ngIf="f.Skillset.errors.required">Name is required.</div>
+                                </div> -->
+                            </div>
+                          
+                            <button class="btn btn-primary" type="submit" [disabled]="!RatingForm.valid">Submit</button>
+                    
+
+                        <!-- </div> -->
+                    </div>
+                    <!-- /.card-body -->
+
+
+                </form>
+
+             
+            </div>
+            <!-- /.login-card-body -->
+        </div>
+    </div>
+    <!-- /.login-box -->
+
+</body>
+
+</html>
