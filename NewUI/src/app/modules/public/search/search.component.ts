@@ -106,8 +106,9 @@ export class SearchComponent implements OnInit {
       return of([]);
     }
     return this.httpClient.get(
-      'https://www.omdbapi.com/?s=' + term + '&apikey=' + APIKEY,
-      { params: PARAMS.set('search', term) }
+      'https://newhackthon.azurewebsites.net/search/TEST'
+     // 'https://www.omdbapi.com/?s=' + term + '&apikey=' + APIKEY,
+    //  { params: PARAMS.set('search', term) }
     );
   }
   name: string = '';
